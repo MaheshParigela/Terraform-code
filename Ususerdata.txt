@@ -1,0 +1,41 @@
+#!/bin/bash
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2 
+echo "
+<html>
+<head>
+    <title>US Server(America) </title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #b3389a;
+            margin-top: 100px;
+        }
+
+        .card{
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🇺🇸 US Server</h1>
+    <h2>Welcome to North Virginia Region</h2>
+
+    <p><strong>Region:</strong> us-east-1</p>
+    <p><strong>Environment:</strong> Production</p>
+    <p><strong>Status:</strong> Running</p>
+
+    <p>This page is hosted from AWS US East (N. Virginia).</p>
+</div>
+
+</body>
+</html>" > /var/www/html/index.html

@@ -1,0 +1,12 @@
+$env:TF_LOG="INFO"  -> which monitors the only information logs along with the errors and warns.
+$env:TF_LOG="TRACE"
+$env:TF_LOG="WARN"
+$env:TF_LOG="ERROR"
+$env:TF_LOG="DEBUG"
+ IF we want save logs to another file then use the below commands
+
+ $env:TF_LOG="TRACE"
+ $env:TF_LOG_PATH="mycode.log" 
+ terraform plan                 -> Need to run all the 3 commands which helps to store the log files.
+
+ Remove-Item Env:TF_LOG -> To unset the logging or stop the logging
